@@ -6,31 +6,34 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" type="text/css" href="normalize.css">
   <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
   <title>Check Yo'Self</title>
 </head>
 <body>
   <header>
-    <h1>CHECK <span class = "word-yo">YO' </span> Self</h1>
+    <h1>check <span class = "word-yo">YO' </span> self</h1>
     <div class = "search-assets-grouped">
-      <!-- <img src= ""> load assets -->
+      <i class="fas fa-search"></i>
       <input type="text" placeholder="Search" class = "input-search">
     </div>
   </header>
   <main> 
     <aside class="side-bar">
-      <section>
-        <h3>Task Title</h3>
-        <input type="text" placeholder="Title" class = "input-title">
-        <ul class="view-task">
-        </ul>
-        <h3>Task Item</h3>
-        <div class="item-assets-grouped">
-          <input class="input-item">
-          <img class="add-item-btn">
+      <form class="task-create-container">
+        <label class="task title-text" for="task-title">Task Title</label>
+        <input class="task title-input" type="text" id="task-title" maxlength="20">
+        <div class="view-task">
+          <ul class="aside-tasks">
+          </ul>
         </div>
-        <button class="sb-btn list-btn">Make Task List</button>
-        <button class="sb-btn clear-all-btn">Clear All</button>
-      </section>
+        <label class="task item-text" for="body">Task Item</label>
+        <input class="task item-input" type="text" id="body" maxlength="50"> 
+        <i class="fas fa-search"></i>
+        <div class="task-btns">
+          <button class="sidebar-btn make-btn" type="submit">Make Task List</button>
+          <button class="sidebar-btn clear-btn" type="submit">Clear All</button>
+        </div>
+      </form>
       <section>
         <button class="sb-btn filter-btn">Filter By Urgency</button>
       </section>
