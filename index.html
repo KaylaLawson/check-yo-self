@@ -11,25 +11,25 @@
 </head>
 <body>
   <header>
-    <h1>check <span class = "word-yo">YO' </span> self</h1>
+    <h1>CHECK <span class = "word-yo">YO' </span> SELF</h1>
     <div class = "search-assets-grouped">
       <i class="fas fa-search"></i>
-      <input type="text" placeholder="Search" class = "input-search">
+      <input type="text" placeholder="Search" class = "search-input">
     </div>
   </header>
   <main> 
+    <!-- <section>
+      <button class="organize-btn" disabled="true" >Organize Yo'Self </button>
+    </section> -->
     <aside class="side-bar">
       <form class="task-create-container">
         <label class="task title-text" for="task-title">Task Title</label>
         <input class="task title-input" type="text" id="task-title" maxlength="20">
-        <div class="view-task">
-          <ul class="aside-tasks">
-          </ul>
-        </div>
+        <div class="aside-tasks-container"></div>
         <label class="task item-text" for="body">Task Item</label>
-        <input class="task item-input" type="text" id="body" maxlength="50"> 
-        <i class="fas fa-search"></i>
-        <div class="task-btns">
+        <input class="task item-input"  type="text" id="body" maxlength="50"> 
+        <button class="add-item" type="submit" disabled ></button>
+        <div class="main-task-btns">
           <button class="sidebar-btn make-btn" type="submit">Make Task List</button>
           <button class="sidebar-btn clear-btn" type="submit">Clear All</button>
         </div>
