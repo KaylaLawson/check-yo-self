@@ -6,8 +6,8 @@ class ToDoList {
     this.urgent = urgent || false;
   }
 
-  saveToStorage() {
-
+  saveToStorage(newTasks) {
+    localStorage.setItem('todos', JSON.stringify(newTasks));
   }
 
   deleteFromStorage() {
