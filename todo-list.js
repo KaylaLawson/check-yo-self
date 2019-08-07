@@ -3,22 +3,27 @@ class ToDoList {
     this.id = id;
     this.title = title;
     this.tasks = tasks || [];
-    this.urgent = urgent || false;
+    this.urgent = urgent;
   }
 
-  saveToStorage(newTasks) {
-    localStorage.setItem('todos', JSON.stringify(newTasks));
+  saveToStorage(newStickies) {
+    localStorage.setItem('stickyNotes', JSON.stringify(newStickies));
   }
 
-  deleteFromStorage() {
-
+  deleteFromStorage(oldToDos) {
+    return oldToDos.filter(toDo => toDo.id != this.id);
   }
-
+    
   updateToDo() {
-
+    this.urgent = !this.urgent
   }
 
-  updateTask() {
-
+  updateTask(taskID) {
+    this.tasks = this.tasks.map(task => {
+      if (task.id == taskID) {
+        task.complete = !task.complete
+      }
+      return task
+    })
   }
 }
